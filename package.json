@@ -1,6 +1,6 @@
 {
   "name": "azure-eventhub-publisher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "lightweight lib to publish events into an azure eventhub instance",
   "main": "src/lib/index.js",
   "bin": {
@@ -17,6 +17,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@azure/event-hubs": "^5.7.0",
     "esm": "^3.2.25"
   }
 }
