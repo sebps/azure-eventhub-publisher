@@ -1,0 +1,22 @@
+{
+  "name": "azure-eventhub-publisher",
+  "version": "1.0.0",
+  "description": "lightweight lib to publish events into an azure eventhub instance",
+  "main": "src/lib/index.js",
+  "bin": {
+    "azure-eventhub-publisher": "bin/publish-event"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sebps",
+  "homepage": "https://github.com/sebps/azure-eventhub-publisher",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sebps/azure-eventhub-publisher.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}
