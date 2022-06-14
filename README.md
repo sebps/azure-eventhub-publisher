@@ -22,7 +22,12 @@ $ npm install azure-eventhub-publisher -g
 
 ### Usage
 To publish and event to an eventhub instance, run the following command :
+
+#### Send a single event
 ```azure-eventhub-publisher --config=<CONFIG_FILE_PATH> --event=<EVENT_FILE_PATH>```
+
+#### Send a batch of events
+```azure-eventhub-publisher --config=<CONFIG_FILE_PATH> --events=<EVENTS_FILE_PATH>```
 
 ### Arguments 
 
@@ -41,18 +46,28 @@ $ npm install azure-eventhub-publisher
 
 ### Usage
 ```
-const { publishEvent } = require("azure-eventhub-publisher")
+const { publishEvent, publishEvents } = require("azure-eventhub-publisher")
 
 const configuration = {
     eventhubConnectionString: <EVENTHUB_CONNECTION_STRING>,
     eventhubName: <EVENTHUB_NAME>  
 }
 
+// publish a single event
 const event = {
     'test':'test'
 }
 
 publishEvent(configuration, event)
+
+// publish a batch of events
+const events = [{
+    'test':'test'
+}, {
+    'test':'test'
+}]
+
+publishEvents(configuration, events)
 ```
 
 ### Parameters
