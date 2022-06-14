@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs'
 import { publishEvent, publishEvents } from './lib/index.js' 
 
-export function cli(args) {
+export function cli(args) {    
     let configPath
     let eventPath
     let eventsPath
@@ -34,6 +34,4 @@ export function cli(args) {
         const events = JSON.parse(rawEvents)
         publishEvents(config, events)
     }
-
-
 }
